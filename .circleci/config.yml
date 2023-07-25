@@ -20,6 +20,7 @@ jobs:
             node --version => v
             sudo apt install nodejs
 
+            npm install libc-ares2; libjs-highlight.js; libnode72; nodejs-doc
             echo "--------- The images - Building ------------"
 
             docker build -t udagram-api-feed ../udagram-api-feed

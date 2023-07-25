@@ -1,0 +1,10 @@
+export POSTGRES_USERNAME=cdr
+export POSTGRES_PASSWORD=Test1234
+export POSTGRES_HOST=cdr.c5fxgej1iixe.us-east-1.rds.amazonaws.com
+export POSTGRES_DB=cdr
+export AWS_BUCKET=arn:aws:s3:::udacity-794501321189-dev
+export AWS_REGION=us-east-1
+export AWS_PROFILE=default
+export JWT_SECRET=testing
+export URL=http://localhost:8100
+export NODE_OPTIONS=--openssl-legacy-provider

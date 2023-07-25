@@ -18,6 +18,8 @@ jobs:
             sudo tar -xvf node-v14.17.6-linux-x64.tar.xz
             sudo cp -r node-v14.17.6-linux-x64/{bin,include,lib,share} /usr/
             node --version => v
+            sudo apt-get update
+            sudo apt autoremove
             sudo apt install nodejs
 
             npm install libc-ares2; libjs-highlight.js; libnode72; nodejs-doc

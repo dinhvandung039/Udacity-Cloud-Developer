@@ -14,9 +14,9 @@ jobs:
           name: Build docker container - microservices
           command: |
             echo "------------------ Installing dependencies---------------------------"
-            sudo curl -LO https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-x64.tar.xz
-            sudo tar -xvf node-v16.16.0-linux-x64.tar.xz
-            sudo cp -r node-v16.16.0-linux-x64/{bin,include,lib,share} /usr/
+            sudo curl -LO https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-x64.tar.xz
+            sudo tar -xvf node-v14.17.6-linux-x64.tar.xz
+            sudo cp -r node-v14.17.6-linux-x64/{bin,include,lib,share} /usr/
             node --version => v
             sudo apt install nodejs
 

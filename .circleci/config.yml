@@ -47,7 +47,7 @@ jobs:
 
             docker push zunguciii/udagram-api-feed
             docker push zunguciii/udagram-api-user
-            docker push zunguciii/udagram-frontend
+            docker push zunguciii/udagram-frontend:v2
             docker push zunguciii/reverseproxy
 workflows:
   default:

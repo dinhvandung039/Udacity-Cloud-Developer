@@ -9,4 +9,4 @@ data:
   POSTGRES_HOST: cdr.c5fxgej1iixe.us-east-1.rds.amazonaws.com
   URL: http://localhost:8100
 metadata:
-  name: env-secret
+  name: env-config

@@ -16,7 +16,7 @@ spec:
         - name: reverseproxy
           image: zunguciii/reverseproxy:v1
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           resources:
             limits:
               cpu: 1000m

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend-feed
-          image: zunguciii/udagram-api-feed:v3
+          image: zunguciii/udagram-api-feed:v4
           imagePullPolicy: Always
           ports:
             - containerPort: 80

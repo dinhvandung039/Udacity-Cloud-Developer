@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: reverseproxy
-          image: zunguciii/reverseproxy:v1
+          image: zunguciii/reverseproxy:v3
           ports:
             - containerPort: 8080
           resources:

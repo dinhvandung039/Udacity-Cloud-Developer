@@ -32,7 +32,7 @@ jobs:
             docker tag udagram-api-user zunguciii/udagram-api-user:v4
 
             docker build -t udagram-frontend ./udagram-frontend
-            docker tag udagram-frontend zunguciii/udagram-frontend:v11
+            docker tag udagram-frontend zunguciii/udagram-frontend:v12
 
             docker build -t udagram-reverseproxy ./udagram-reverseproxy
             docker tag udagram-reverseproxy zunguciii/reverseproxy:v6
@@ -47,7 +47,7 @@ jobs:
 
             docker push zunguciii/udagram-api-feed:v4
             docker push zunguciii/udagram-api-user:v4
-            docker push zunguciii/udagram-frontend:v11
+            docker push zunguciii/udagram-frontend:v12
             docker push zunguciii/reverseproxy:v6
 workflows:
   default:

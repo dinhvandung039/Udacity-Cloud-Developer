@@ -35,7 +35,7 @@ jobs:
             docker tag udagram-frontend zunguciii/udagram-frontend:v9
 
             docker build -t udagram-reverseproxy ./udagram-reverseproxy
-            docker tag udagram-reverseproxy zunguciii/reverseproxy
+            docker tag udagram-reverseproxy zunguciii/reverseproxy:v1
 
             echo "-------- All images succesfully built----------"
 
@@ -48,7 +48,7 @@ jobs:
             docker push zunguciii/udagram-api-feed:v2
             docker push zunguciii/udagram-api-user:v2
             docker push zunguciii/udagram-frontend:v9
-            docker push zunguciii/reverseproxy
+            docker push zunguciii/reverseproxy:v1
 workflows:
   default:
     jobs:

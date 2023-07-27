@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       run: backend-feed
-  replicas: 2
+  replicas: 3
   template:
     metadata:
       labels:

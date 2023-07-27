@@ -19,7 +19,7 @@ services:
       AWS_PROFILE: default
       AWS_BUCKET: arn:aws:s3:::udacity-794501321189-dev
       JWT_SECRET: testing
-      URL: "http://localhost:8100"
+      URL: "http://a8c585af1543a454b9077862c625d15b-606400056.us-east-1.elb.amazonaws.com:8080"
   backend-feed:
     image: udagram-api-feed
     volumes:
@@ -33,7 +33,7 @@ services:
       AWS_PROFILE: default
       AWS_BUCKET: arn:aws:s3:::udacity-794501321189-dev
       JWT_SECRET: testing
-      URL: "http://localhost:8100"
+      URL: "http://a8c585af1543a454b9077862c625d15b-606400056.us-east-1.elb.amazonaws.com:8080"
   frontend:
     image: udagram-frontend
     ports:

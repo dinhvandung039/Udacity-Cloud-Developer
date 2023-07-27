@@ -6,5 +6,5 @@ export AWS_BUCKET=arn:aws:s3:::udacity-794501321189-dev
 export AWS_REGION=us-east-1
 export AWS_PROFILE=default
 export JWT_SECRET=testing
-export URL=http://localhost:8100
+export URL=http://a8c585af1543a454b9077862c625d15b-606400056.us-east-1.elb.amazonaws.com:8080
 export NODE_OPTIONS=--openssl-legacy-provider

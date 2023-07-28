@@ -26,16 +26,16 @@ jobs:
             echo "--------- The images - Building ------------"
 
             docker build -t udagram-api-feed ./udagram-api-feed
-            docker tag udagram-api-feed zunguciii/udagram-api-feed:v5
+            docker tag udagram-api-feed zunguciii/udagram-api-feed:v6
 
             docker build -t udagram-api-user ./udagram-api-user
-            docker tag udagram-api-user zunguciii/udagram-api-user:v5
+            docker tag udagram-api-user zunguciii/udagram-api-user:v6
 
             docker build -t udagram-frontend ./udagram-frontend
-            docker tag udagram-frontend zunguciii/udagram-frontend:v14
+            docker tag udagram-frontend zunguciii/udagram-frontend:v15
 
             docker build -t udagram-reverseproxy ./udagram-reverseproxy
-            docker tag udagram-reverseproxy zunguciii/reverseproxy:v8
+            docker tag udagram-reverseproxy zunguciii/reverseproxy:v11
 
             echo "-------- All images succesfully built----------"
 
@@ -45,10 +45,10 @@ jobs:
 
             echo "-------------- Pushing images to dockerhub-------"
 
-            docker push zunguciii/udagram-api-feed:v5
-            docker push zunguciii/udagram-api-user:v5
-            docker push zunguciii/udagram-frontend:v14
-            docker push zunguciii/reverseproxy:v8
+            docker push zunguciii/udagram-api-feed:v6
+            docker push zunguciii/udagram-api-user:v6
+            docker push zunguciii/udagram-frontend:v15
+            docker push zunguciii/reverseproxy:v11
 workflows:
   default:
     jobs:

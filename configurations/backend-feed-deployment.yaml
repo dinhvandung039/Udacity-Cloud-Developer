@@ -6,7 +6,6 @@ spec:
   selector:
     matchLabels:
       run: backend-feed
-  replicas: 3
   template:
     metadata:
       labels:
@@ -14,10 +13,15 @@ spec:
     spec:
       containers:
         - name: backend-feed
-          image: zunguciii/udagram-api-feed:v5
+          args:
+            - --cert-dir=/tmp
+            - --secure-port=4443
+            - --kubelet-insecure-tls=true
+            - --kubelet-preferred-address-types=InternalIP
+          image: zunguciii/udagram-api-feed:v6
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           resources:
             limits:
               cpu: 500m
@@ -92,4 +96,4 @@ spec:
       port: 8080
       targetPort: 8080
   selector:
-    service: backend-feed
+    run: backend-feed

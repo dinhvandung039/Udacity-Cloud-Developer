@@ -15,7 +15,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-        - image: zunguciii/reverseproxy:v7
+        - image: zunguciii/reverseproxy:v8
           name: reverseproxy
           imagePullPolicy: Always
           resources:

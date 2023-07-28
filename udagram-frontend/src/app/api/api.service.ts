@@ -9,7 +9,7 @@ import { environment } from "../../environments/environment";
 import { map } from "rxjs/operators";
 
 const API_HOST =
-  "http://a8c585af1543a454b9077862c625d15b-606400056.us-east-1.elb.amazonaws.com:8080/api/v0";
+  "http://a7414817d6d9d47e0b11770c4e074c88-863947330.us-east-1.elb.amazonaws.com:8080/api/v0";
 
 @Injectable({
   providedIn: "root",

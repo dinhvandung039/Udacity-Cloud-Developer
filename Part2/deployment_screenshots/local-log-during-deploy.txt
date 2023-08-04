@@ -1,0 +1,123 @@
+$ eb init
+
+Select a default region
+1) us-east-1 : US East (N. Virginia)
+2) us-west-1 : US West (N. California)
+3) us-west-2 : US West (Oregon)
+4) eu-west-1 : EU (Ireland)
+5) eu-central-1 : EU (Frankfurt)
+6) ap-south-1 : Asia Pacific (Mumbai)
+7) ap-southeast-1 : Asia Pacific (Singapore)
+8) ap-southeast-2 : Asia Pacific (Sydney)
+9) ap-northeast-1 : Asia Pacific (Tokyo)
+10) ap-northeast-2 : Asia Pacific (Seoul)
+11) sa-east-1 : South America (Sao Paulo)
+12) cn-north-1 : China (Beijing)
+13) cn-northwest-1 : China (Ningxia)
+14) us-east-2 : US East (Ohio)
+15) ca-central-1 : Canada (Central)
+16) eu-west-2 : EU (London)
+17) eu-west-3 : EU (Paris)
+18) eu-north-1 : EU (Stockholm)
+19) eu-south-1 : EU (Milano)
+20) ap-east-1 : Asia Pacific (Hong Kong)
+21) me-south-1 : Middle East (Bahrain)
+22) il-central-1 : Middle East (Israel)
+23) af-south-1 : Africa (Cape Town)
+24) ap-southeast-3 : Asia Pacific (Jakarta)
+25) ap-northeast-3 : Asia Pacific (Osaka)
+(default is 3): 1
+
+
+Select an application to use
+1) aws-filter-image
+2) Part 22
+3) instagram-filter-image
+4) udacity-filter-image
+5) [ Create new Application ]
+(default is 5):
+
+
+Enter Application Name
+(default is "www"): image-filter
+Application image-filter has been created.
+
+It appears you are using Node.js. Is this correct?
+(Y/n): y
+Select a platform branch.
+1) Node.js 18 running on 64bit Amazon Linux 2
+2) Node.js 16 running on 64bit Amazon Linux 2
+3) Node.js 14 running on 64bit Amazon Linux 2
+(default is 1): 1
+
+Cannot setup CodeCommit because there is no Source Control setup, continuing with initialization
+Do you want to set up SSH for your instances?
+(Y/n): n
+
+ADMIN@Genuine MINGW64 /e/DEV Nanodegree/part 2/www
+$ eb craete
+usage: eb (sub-commands ...) [options ...] {arguments ...}
+eb: error: unrecognized arguments: craete
+
+ADMIN@Genuine MINGW64 /e/DEV Nanodegree/part 2/www
+$ eb create
+Enter Environment Name
+(default is image-filter-dev):
+Enter DNS CNAME prefix
+(default is image-filter-dev22):
+
+Select a load balancer type
+1) classic
+2) application
+3) network
+(default is 2): 2
+
+
+Would you like to enable Spot Fleet requests for this environment? (y/N): n
+Creating application version archive "app-230705_104551297853".
+Uploading image-filter/app-230705_104551297853.zip to S3. This may take a while.
+Upload Complete.
+Environment details for: image-filter-dev
+  Application name: image-filter
+  Region: us-east-1
+  Deployed Version: app-230705_104551297853
+  Environment ID: e-uagsuam8wz
+  Platform: arn:aws:elasticbeanstalk:us-east-1::platform/Node.js 18 running on 64bit Amazon Linux 2/5.8.3
+  Tier: WebServer-Standard-1.0
+  CNAME: image-filter-dev22.us-east-1.elasticbeanstalk.com
+  Updated: 2023-07-05 03:45:57.632000+00:00
+Printing Status:
+2023-07-05 03:45:56    INFO    createEnvironment is starting.
+2023-07-05 03:45:57    INFO    Using elasticbeanstalk-us-east-1-835095973904 as Amazon S3 storage bucket for environment data.
+2023-07-05 03:46:19    INFO    Created security group named: sg-06324fcbc3f29c263
+2023-07-05 03:46:34    INFO    Created security group named: awseb-e-uagsuam8wz-stack-AWSEBSecurityGroup-1674QZRZJX7NI
+2023-07-05 03:46:34    INFO    Created target group named: arn:aws:elasticloadbalancing:us-east-1:835095973904:targetgroup/awseb-AWSEB-BX3MYSW71RME/292bcd88603ff663
+2023-07-05 03:46:35    INFO    Created Auto Scaling launch configuration named: awseb-e-uagsuam8wz-stack-AWSEBAutoScalingLaunchConfiguration-6fHQiFOxQRvt
+2023-07-05 03:46:50    INFO    Created Auto Scaling group named: awseb-e-uagsuam8wz-stack-AWSEBAutoScalingGroup-E79P4VTI49A7
+2023-07-05 03:46:50    INFO    Waiting for EC2 instances to launch. This may take a few minutes.
+2023-07-05 03:47:06    INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:us-east-1:835095973904:scalingPolicy:5783e90c-3d0d-4f5d-97d2-e7ac692c7af5:autoScalingGroupName/awseb-e-uagsuam8wz-stack-AWSEBAutoScalingGroup-E79P4VTI49A7:policyName/awseb-e-uagsuam8wz-stack-AWSEBAutoScalingScaleDownPolicy-uBAEmjeFHFFD
+2023-07-05 03:47:06    INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:us-east-1:835095973904:scalingPolicy:b22bcddb-1a79-4dce-9305-39dd0a5ee776:autoScalingGroupName/awseb-e-uagsuam8wz-stack-AWSEBAutoScalingGroup-E79P4VTI49A7:policyName/awseb-e-uagsuam8wz-stack-AWSEBAutoScalingScaleUpPolicy-IJ35NiYWRWit
+2023-07-05 03:47:06    INFO    Created CloudWatch alarm named: awseb-e-uagsuam8wz-stack-AWSEBCloudwatchAlarmLow-15X35MK97PVJY
+2023-07-05 03:47:06    INFO    Created CloudWatch alarm named: awseb-e-uagsuam8wz-stack-AWSEBCloudwatchAlarmHigh-18DPKJ4MKG1SS
+2023-07-05 03:48:25    INFO    Created load balancer named: arn:aws:elasticloadbalancing:us-east-1:835095973904:loadbalancer/app/awseb-AWSEB-8ADTGFBEQFJ2/e364c925353e4db2
+2023-07-05 03:48:25    INFO    Created Load Balancer listener named: arn:aws:elasticloadbalancing:us-east-1:835095973904:listener/app/awseb-AWSEB-8ADTGFBEQFJ2/e364c925353e4db2/bb78825a5075fb4c
+2023-07-05 03:48:29    INFO    Instance deployment: You didn't specify a Node.js version in the 'package.json' file in your source bundle. The deployment didn't install a specific Node.js version.
+2023-07-05 03:48:45    INFO    Instance deployment completed successfully.
+2023-07-05 03:49:20    INFO    Application available at image-filter-dev22.us-east-1.elasticbeanstalk.com.
+2023-07-05 03:49:20    INFO    Successfully launched environment: image-filter-dev
+
+Alert: An update to the EB CLI is available. Run "pip install --upgrade awsebcli" to get the latest version.
+
+ADMIN@Genuine MINGW64 /e/DEV Nanodegree/part 2/www
+$ eb deploy
+Creating application version archive "app-230705_105000750633".
+Uploading image-filter/app-230705_105000750633.zip to S3. This may take a while.
+Upload Complete.
+2023-07-05 03:50:04    INFO    Environment update is starting.
+2023-07-05 03:50:08    INFO    Deploying new version to instance(s).
+2023-07-05 03:50:12    INFO    Instance deployment: You didn't specify a Node.js version in the 'package.json' file in your source bundle. The deployment didn't install a specific Node.js version.
+2023-07-05 03:50:19    INFO    Instance deployment completed successfully.
+2023-07-05 03:50:23    INFO    New application version was deployed to running EC2 instances.
+2023-07-05 03:50:23    INFO    Environment update completed successfully.
+
+Alert: An update to the EB CLI is available. Run "pip install --upgrade awsebcli" to get the latest version.

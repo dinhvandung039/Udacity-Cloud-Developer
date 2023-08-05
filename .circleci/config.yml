@@ -24,16 +24,18 @@ jobs:
 
             # npm install libc-ares2; libjs-highlight.js; libnode72; nodejs-doc
             echo "--------- The images - Building ------------"
-            docker build -t udagram-api-feed .././part3/udagram-api-feed
+            ls
+            pwd
+            docker build -t udagram-api-feed .././Part3/udagram-api-feed
             docker tag udagram-api-feed zunguciii/udagram-api-feed:v6
 
-            docker build -t udagram-api-user .././part3/udagram-api-user
+            docker build -t udagram-api-user .././Part3/udagram-api-user
             docker tag udagram-api-user zunguciii/udagram-api-user:v6
 
-            docker build -t udagram-frontend .././part3/udagram-frontend
+            docker build -t udagram-frontend .././Part3/udagram-frontend
             docker tag udagram-frontend zunguciii/udagram-frontend:v15
 
-            docker build -t udagram-reverseproxy .././part3/udagram-reverseproxy
+            docker build -t udagram-reverseproxy .././Part3/udagram-reverseproxy
             docker tag udagram-reverseproxy zunguciii/reverseproxy:v11
 
             echo "-------- All images succesfully built----------"

@@ -1,0 +1,57 @@
+version: 2.1
+
+jobs:
+  lint-app-microservices:
+    docker:
+      - image: circleci/node:14.17.6
+    steps:
+      - checkout
+  build-docker:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Build docker container - microservices
+          command: |
+            echo "------------------ Installing dependencies---------------------------"
+            sudo curl -LO https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-x64.tar.xz
+            sudo tar -xvf node-v14.17.6-linux-x64.tar.xz
+            sudo cp -r node-v14.17.6-linux-x64/{bin,include,lib,share} /usr/
+            node --version => v
+            sudo apt-get update
+            sudo apt autoremove
+            sudo apt install nodejs
+
+            # npm install libc-ares2; libjs-highlight.js; libnode72; nodejs-doc
+            echo "--------- The images - Building ------------"
+
+            docker build -t udagram-api-feed ./udagram-api-feed
+            docker tag udagram-api-feed zunguciii/udagram-api-feed:v6
+
+            docker build -t udagram-api-user ./udagram-api-user
+            docker tag udagram-api-user zunguciii/udagram-api-user:v6
+
+            docker build -t udagram-frontend ./udagram-frontend
+            docker tag udagram-frontend zunguciii/udagram-frontend:v15
+
+            docker build -t udagram-reverseproxy ./udagram-reverseproxy
+            docker tag udagram-reverseproxy zunguciii/reverseproxy:v11
+
+            echo "-------- All images succesfully built----------"
+
+            echo " ------- login in to hub--------"
+
+            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+
+            echo "-------------- Pushing images to dockerhub-------"
+
+            docker push zunguciii/udagram-api-feed:v6
+            docker push zunguciii/udagram-api-user:v6
+            docker push zunguciii/udagram-frontend:v15
+            docker push zunguciii/reverseproxy:v11
+workflows:
+  default:
+    jobs:
+      - lint-app-microservices
+      - build-docker:
+          requires: [lint-app-microservices]
